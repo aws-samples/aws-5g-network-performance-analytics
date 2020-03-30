@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sample PM File. All values are hypothetical but syntactically correct -->
+<measCollecFile xmlns="http://www.3gpp.org/ftp/specs/archive/32_series/32.435#measCollec" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.3gpp.org/ftp/specs/archive/32_series/32.435#measCollec http://www.3gpp.org/ftp/specs/archive/32_series/32.435#measCollec">
+	<fileHeader fileFormatVersion="32.435 v6.1" vendorName="Company NN" dnPrefix="SubNetwork=1">
+		<fileSender elementType="Element Manager" localDn="OMC_PS=10"/>
+		<measCollec beginTime="2005-06-09T13:00:00-05:00"/>
+	</fileHeader>
+	<measData>
+		<managedElement localDn="ManagedElement=PS_Core" userLabel="SGSN" swVersion="R30.1.5"/>
+		<measInfo measInfoId="Category A">
+			<job jobId="01"/>
+			<granPeriod endTime="2005-06-09T13:15:00-06:00" duration="PT900S"/>
+			<repPeriod duration="PT1800S"/>
+			<measTypes>MM.AttGprsAttach MM.SuccGprsAttach MM.AbortedGprsAttach MM.AttIntraSgsnRaUpdate</measTypes>
+			<measValue measObjLdn="SgsnFunction=1">
+				<measResults>10 20 30 40</measResults>
+			</measValue>
+		</measInfo>
+		<measInfo measInfoId="Category B">
+			<job jobId="02"/>
+			<granPeriod endTime="2005-06-09T13:15:00-06:00" duration="PT900S"/>
+			<repPeriod duration="PT1800S"/>
+			<measTypes>MM.AttCombiAttach MM.SuccCombiAttach MM. MM.AbortedCombiAttachMM.AttCombiDetachMs</measTypes>
+			<measValue measObjLdn="SgsnFunction=2">
+				<measResults>50 60 70 80</measResults>
+			</measValue>
+		</measInfo>
+		<measInfo measInfoId="Category C">
+			<job jobId="03"/>
+			<granPeriod endTime="2005-06-09T13:15:00-06:00" duration="PT1800S"/>
+			<repPeriod duration="PT900S"/>
+			<measTypes>MM.AttPsPagingProcIu MM.SuccPsPagingProcIu</measTypes>
+			<measValue measObjLdn="SgsnFunction=3">
+				<measResults>25 30</measResults>
+			</measValue>
+		</measInfo>
+	</measData>
+	<fileFooter>
+		<measCollec endTime="2005-06-09T13:15:00-06:00"/>
+	</fileFooter>
+</measCollecFile>
